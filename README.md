@@ -1,6 +1,6 @@
 # 🍃 Calculadora de Emissão de CO₂
 
-[![Deploy to GitHub Pages](https://github.com/marcelo/carbon-calculator/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/marcelo/carbon-calculator/actions)
+[![Deploy to GitHub Pages](https://github.com/garbinmarcelo/carbon-calculator/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/marcelo/carbon-calculator/actions)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 > Calcule a pegada de carbono das suas viagens e descubra como suas escolhas de transporte impactam o meio ambiente.
