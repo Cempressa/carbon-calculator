@@ -1,6 +1,6 @@
 # 🍃 Calculadora de Emissão de CO₂
 
-[![Deploy to GitHub Pages](https://github.com/garbinmarcelo/carbon-calculator/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/marcelo/carbon-calculator/actions)
+[![Deploy to GitHub Pages](https://github.com/garbinmarcelo/carbon-calculator/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/garbinmarcelo/carbon-calculator/actions)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 > Calcule a pegada de carbono das suas viagens e descubra como suas escolhas de transporte impactam o meio ambiente.
@@ -31,7 +31,7 @@ Não há pré-requisitos para executar este projeto! É uma aplicação web est�
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/marcelo/carbon-calculator.git
+git clone https://github.com/garbinmarcelo/carbon-calculator.git
 ```
 
 2. **Navegue até o diretório do projeto:**
@@ -262,8 +262,8 @@ Este projeto está licenciado sob a **Apache License 2.0** - veja o arquivo [LIC
 ### Suporte
 Para dúvidas, sugestões ou reportar problemas:
 
-- 🐛 **Issues**: [Abrir uma issue no GitHub](https://github.com/marcelo/carbon-calculator/issues)
-- 💬 **Discussões**: [Participar das discussões](https://github.com/marcelo/carbon-calculator/discussions)
+- 🐛 **Issues**: [Abrir uma issue no GitHub](https://github.com/garbinmarcelo/carbon-calculator/issues)
+- 💬 **Discussões**: [Participar das discussões](https://github.com/garbinmarcelo/carbon-calculator/discussions)
 - 📧 **Email**: [Enviar email](mailto:marcelo@example.com)
 
 
