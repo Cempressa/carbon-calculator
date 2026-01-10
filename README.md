@@ -264,16 +264,16 @@ Para dúvidas, sugestões ou reportar problemas:
 
 - 🐛 **Issues**: [Abrir uma issue no GitHub](https://github.com/garbinmarcelo/carbon-calculator/issues)
 - 💬 **Discussões**: [Participar das discussões](https://github.com/garbinmarcelo/carbon-calculator/discussions)
-- 📧 **Email**: [Enviar email](mailto:marcelo@example.com)
+- 📧 **Email**: [Enviar email](mailto:marcelo@garbin.dev)
 
 
 ---
 
 ## 🔗 Links Úteis
 
-- [Documentação sobre Emissões de CO₂](https://www.ipcc.ch/)
-- [Mercado de Créditos de Carbono](https://www.mercadodecarbono.com/)
-- [Sustentabilidade no Transporte](https://www.gov.br/infraestrutura/pt-br)
+- [Documentação sobre Emissões de CO₂](https://seeg.eco.br/)
+- [Mercado de Créditos de Carbono](https://ipam.org.br/cartilhas-ipam/o-que-e-e-como-funciona-o-mercado-de-carbono/)
+- [Sustentabilidade no Transporte](https://www.cobli.co/blog/sustentabilidade-transporte/)
 
 ---
 
