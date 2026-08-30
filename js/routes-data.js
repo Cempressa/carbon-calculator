@@ -121,3 +121,5 @@ const RoutesDB = {
     }
 };
 
+export { RoutesDB };
+
