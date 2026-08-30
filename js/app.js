@@ -1,35 +1,44 @@
+// ===============================
+// IMPORTAÇÕES
+// ===============================
 import { renderResults, renderComparison, renderCarbonCredits } from "./ui.js";
-import { routes } from "./routes-data.js";
-import { emissionFactors } from "./config.js";
+import { RoutesDB } from "./routes-data.js";
+import { CONFIG } from "./config.js";
 
 // ===============================
-// Inicialização
+// ELEMENTOS DO FORMULÁRIO
 // ===============================
-
 const form = document.getElementById("calculator-form");
 const originInput = document.getElementById("origin");
 const destinationInput = document.getElementById("destination");
 const distanceInput = document.getElementById("distance");
 const manualDistanceCheckbox = document.getElementById("manual-distance");
 
-// Preenche lista de cidades
+// ===============================
+// LISTA DE CIDADES
+// ===============================
 const citiesList = document.getElementById("cities-list");
-Object.keys(routes).forEach(city => {
+RoutesDB.getAllCities().forEach(city => {
     const option = document.createElement("option");
     option.value = city;
     citiesList.appendChild(option);
 });
 
 // ===============================
-// Lógica de distância automática
+// ATUALIZAÇÃO AUTOMÁTICA DA DISTÂNCIA
 // ===============================
-
 function updateDistance() {
     const origin = originInput.value.trim();
     const destination = destinationInput.value.trim();
 
-    if (!manualDistanceCheckbox.checked && routes[origin] && routes[origin][destination]) {
-        distanceInput.value = routes[origin][destination];
+    if (!manualDistanceCheckbox.checked) {
+        const distance = RoutesDB.findDistance(origin, destination);
+
+        if (distance !== null) {
+            distanceInput.value = distance;
+        } else {
+            distanceInput.value = "";
+        }
     }
 }
 
@@ -47,9 +56,8 @@ manualDistanceCheckbox.addEventListener("change", () => {
 });
 
 // ===============================
-// Cálculo principal
+// CÁLCULO PRINCIPAL
 // ===============================
-
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -57,14 +65,15 @@ form.addEventListener("submit", (event) => {
     const destination = destinationInput.value.trim();
     const distance = parseFloat(distanceInput.value);
 
-    const transport = document.querySelector("input[name='transport']:checked").value;
-    const factor = emissionFactors[transport];
+    const selectedTransport = document.querySelector("input[name='transport']:checked");
+    const transport = selectedTransport ? selectedTransport.value : null;
 
-    if (!origin || !destination || !distance || !factor) {
+    if (!origin || !destination || !distance || !transport) {
         alert("Preencha todos os campos corretamente.");
         return;
     }
 
+    const factor = CONFIG.EMISSION_FACTORS[transport];
     const emission = distance * factor;
 
     const transportLabels = {
@@ -74,8 +83,10 @@ form.addEventListener("submit", (event) => {
         truck: "Caminhão"
     };
 
-    // Renderiza seções do dashboard
+    // ===============================
+    // CHAMADA DAS FUNÇÕES DO UI.JS
+    // ===============================
     renderResults(emission, distance, transportLabels[transport]);
-    renderComparison(emission, emissionFactors);
+    renderComparison(emission, CONFIG.EMISSION_FACTORS, distance);
     renderCarbonCredits(emission);
 });
