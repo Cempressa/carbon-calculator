@@ -1,3 +1,5 @@
+
+
 /**
  * Configuration Object
  * Contains emission factors, transport mode metadata, and utility functions
@@ -171,4 +173,6 @@ const CONFIG = {
         });
     }
 };
+
+export { CONFIG };
 
