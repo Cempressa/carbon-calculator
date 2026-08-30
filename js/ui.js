@@ -32,7 +32,7 @@ export function renderResults(emission, distance, transportLabel) {
 // COMPARAÇÃO ENTRE TRANSPORTES
 // ===============================
 
-export function renderComparison(emission, factors) {
+export function renderComparison(emission, factors, distance) {
     const container = document.getElementById("comparison-content");
     container.innerHTML = "";
 
