@@ -89,4 +89,9 @@ form.addEventListener("submit", (event) => {
     renderResults(emission, distance, transportLabels[transport]);
     renderComparison(emission, CONFIG.EMISSION_FACTORS, distance);
     renderCarbonCredits(emission);
+    renderResults(emission, distance, transportLabels[transport]);
+    renderComparison(emission, CONFIG.EMISSION_FACTORS, distance);
+    renderCarbonCredits(emission);
+    renderEmissionChart(CONFIG.EMISSION_FACTORS, distance, transport);
+
 });
